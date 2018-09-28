@@ -26,11 +26,11 @@ pal11 <- colorFactor(c("#a6cee3","#1f78b4","#542788"),c("Allegheny River","Monon
 leaflet(data = river) %>%
   addProviderTiles("OpenStreetMap.Mapnik") %>%
   addPolylines(color = ~pal11(NAME), weight = 5) %>%
-  addLegend(pal = pal11, values = ~NAME)
+  addLegend(pal = pal11, values = ~NAME, na.label = "Unknown")
 
 ```
 
-# Basins in Pittsburgh - Polygon
+# Basins in Pittsburgh - Polygons
 
 ```{r}
 Basin <- readOGR("./Allegheny_County_Basin_Outlines_Map/Allegheny_County_Basin_Outlines_Map.shp", layer = "Allegheny_County_Basin_Outlines_Map")
@@ -40,7 +40,7 @@ pal22 <- colorFactor(c("#8c510a","#bf812d","#dfc27d","#f6e8c3","#c7eae5","#80cdc
 leaflet(data = Basin) %>%
   addProviderTiles("OpenStreetMap.Mapnik") %>%
   addPolygons(color = ~pal22(BASIN)) %>%
-  addLegend(pal = pal22, values = ~BASIN)
+  addLegend(position = "topright", pal = pal22, values = ~BASIN)
 ```
 
 # Summer Breakfast Schedule in Pittsburgh - Points
