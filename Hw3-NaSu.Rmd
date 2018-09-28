@@ -3,7 +3,6 @@ title: "Hw3-NaSu"
 author: "Na Su"
 date: "September 27, 2018"
 output: html_document
-runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -13,58 +12,52 @@ require(leaflet.extras)
 require(dplyr)
 require(readxl)
 require(stringr)
+require(plyr)
 ```
 
-# Getting Spatial Data
-
-```{r}
-soil.load <- readOGR("./Allegheny_County_Soil_Type_Areas/Allegheny_County_Soil_Type_Areas.shp", layer = "Allegheny_County_Soil_Type_Areas")
-plot(soil.load)
-summary(soil.load)
-```
-
-# Merging Table Data to your shapefile
-
-```{r}
-# soil_data <- read.csv("Allegheny_County_Soil_Type_Areas.csv") %>%
-#   mutate(FID = str_pad(FID, 4, pad = "0"))
-# 
-# # Just having the matching GEOID's
-# soil <- soil.load[soil.load$GEOID %in% soil_data$FID,]
-# print(soil)
-# soil@data <- merge(soil@data, soil_data, sort = FALSE, by.x = "GEOID", by.y = "FID")
-```
-
-# Blank map with basemap
-
-```{r}
-leaflet(data = soil.load) %>%
-  addProviderTiles(providers$Thunderforest.Landscape,options = providerTileOptions(noWrap = TRUE))%>%
-  addPolygons() %>%
-  addPolylines(color = "#63CBD3")
-  # addPolylines(color = "#63CBD3")
-```
-
-# Shape
-
-```{r}
-leaflet(data = soil.load) %>%
-  addProviderTiles("Stamen.Toner") %>%
-  
-  addPolylines(color = "#63CBD3")
-
-# rivers <- readOGR("./ne_10m_rivers_lake_centerlines")
-# 
-# leaflet(data = rivers) %>%
-#   addProviderTiles("Esri.WorldTerrain", options = providerTileOptions(noWrap = TRUE)) %>%
-#   addPolylines(color = "#63CBD3")
-```
 
 # Lines
 
 ```{r}
-rivers <- readOGR("./ne_10m_rivers_lake_centerlines")
+river <- readOGR("./Allegheny_County_Major_Rivers/Allegheny_County_Major_Rivers.shp", layer = "Allegheny_County_Major_Rivers")
 
-leaflet(data = rivers) %>%
-  addProviderTiles("Esri.WorldTerrain", options = providerTileOptions(noWrap = TRUE)) %>%
-  addPolylines(color = "#63CBD3")
+pal11 <- colorFactor(c("#a6cee3","#1f78b4","#b2df8a","33a02c"))
+
+leaflet(data = river) %>%
+  addProviderTiles("OpenStreetMap.Mapnik") %>%
+  addPolylines(color = "#377eb8")
+
+summary(river)
+  addPolylines(lng = ~lon, lat = ~lat, group = ~grp,
+               color = ~pal11(NAME), weight = 2, opacity = 1) %>%
+  addLegend(pal = pal, values = ~index, opacity = 1)
+```
+
+# Polygon
+
+```{r}
+Basin <- readOGR("./Allegheny_County_Basin_Outlines_Map/Allegheny_County_Basin_Outlines_Map.shp", layer = "Allegheny_County_Basin_Outlines_Map")
+
+leaflet(data = Basin) %>%
+  addProviderTiles("OpenStreetMap.Mapnik") %>%
+  addPolygons(color = "#33a02c") 
+```
+
+# Points
+
+```{r}
+Food_site <- read.csv("Allegheny_County_Summer_Food_Sites.csv")
+
+Food_site$BREAKFAST_ <- mapvalues(Food_site$BREAKFAST_,c("7:30 - 8:30 am", "8 - 9 am","8  - 9 am","8:30 - 9:30 am","8:45 - 9:45 am","9 - 10 am","9 -10 am","9 - 9:30 am", "9:30 - 10:30 am"," "),c("7:30-8:30am", "8:00-9:00am","8:00-9:00am","8:30-9:30am","8:45-9:45am","9:00-10:00am","9:00-10:00am","9:00-9:30am", "9:30-10:30am","Unavailable"))
+
+levels(Food_site$BREAKFAST_ ) <- c("7:30-8:30am", "8:00-9:00am","8:30-9:30am","8:45-9:45am","9:00-10:00am","9:00-9:30am", "9:30-10:30am","Unavailable")
+
+pal00 <- colorFactor(c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf'),c('7:30-8:30am','8:00-9:00am','8:00-9:00am','8:30-9:30am','8:45-9:45am','9:00-10:00am','9:00-10:00am','9:00-9:30am', '9:30-10:30am',"Unavailable"))
+
+leaflet() %>%
+  addProviderTiles("OpenStreetMap") %>%
+  addCircleMarkers(data = Food_site, lng = ~ï..X, lat = ~Y, radius = 1.5, color = ~pal00(BREAKFAST_)) %>%
+  addLegend(position = "topright" , pal = pal00, values = Food_site$BREAKFAST_, title = "BREAKFAST_SCHEDULE")
+
+```
+
