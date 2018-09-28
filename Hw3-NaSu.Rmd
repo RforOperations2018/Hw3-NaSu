@@ -21,12 +21,12 @@ require(plyr)
 ```{r}
 river <- readOGR("./Allegheny_County_Major_Rivers/Allegheny_County_Major_Rivers.shp", layer = "Allegheny_County_Major_Rivers")
 
-pal11 <- colorFactor(c("#a6cee3","#1f78b4","#b2df8a","#33a02c"),c("Allegheny River","Monongahela River","Ohio River","NA's"))
+pal11 <- colorFactor(c("#a6cee3","#1f78b4","#542788"),c("Allegheny River","Monongahela River","Ohio River"))
 
 leaflet(data = river) %>%
   addProviderTiles("OpenStreetMap.Mapnik") %>%
-  addPolylines(color = ~pal11(NAME), weight = 2, opacity = 1) %>%
-  addLegend(pal = pal11, values = ~NAME, opacity = 1)
+  addPolylines(color = ~pal11(NAME), weight = 5) %>%
+  addLegend(pal = pal11, values = ~NAME)
 
 ```
 
@@ -35,7 +35,7 @@ leaflet(data = river) %>%
 ```{r}
 Basin <- readOGR("./Allegheny_County_Basin_Outlines_Map/Allegheny_County_Basin_Outlines_Map.shp", layer = "Allegheny_County_Basin_Outlines_Map")
 
-pal22 <- colorFactor(c("#8c510a","#bf812d","#dfc27d","#f6e8c3","#c7eae5","#80cdc1","#35978f","#01665e"),c("Chartiers Creek","Lower Northern Allegheny River","Lower Ohio River","Saw Mill Run","Shallow-Cut Monongahela River","Thompson Run/Turtle Creek","Upper Allegheny River Upper","Ohio/Allegheny/Monongahela Ri"))
+pal22 <- colorFactor(c("#8c510a","#bf812d","#dfc27d","#f6e8c3","#c7eae5","#80cdc1","#35978f","#01665e"),c("Chartiers Creek","Lower Northern Allegheny River","Lower Ohio River","Saw Mill Run","Shallow-Cut Monongahela River","Thompson Run/Turtle Creek","Upper Allegheny River", "Upper Ohio/Allegheny/Monongahela Ri"))
 
 leaflet(data = Basin) %>%
   addProviderTiles("OpenStreetMap.Mapnik") %>%
@@ -43,7 +43,7 @@ leaflet(data = Basin) %>%
   addLegend(pal = pal22, values = ~BASIN)
 ```
 
-# Summer-Breakfast in Pittsburgh - Points
+# Summer Breakfast Schedule in Pittsburgh - Points
 
 ```{r}
 Food_site <- read.csv("Allegheny_County_Summer_Food_Sites.csv")
