@@ -6,3 +6,65 @@ output: html_document
 runtime: shiny
 ---
 
+```{r setup, include=FALSE}
+require(rgdal)
+require(leaflet)
+require(leaflet.extras)
+require(dplyr)
+require(readxl)
+require(stringr)
+```
+
+# Getting Spatial Data
+
+```{r}
+soil.load <- readOGR("./Allegheny_County_Soil_Type_Areas/Allegheny_County_Soil_Type_Areas.shp", layer = "Allegheny_County_Soil_Type_Areas")
+plot(soil.load)
+summary(soil.load)
+```
+
+# Merging Table Data to your shapefile
+
+```{r}
+# soil_data <- read.csv("Allegheny_County_Soil_Type_Areas.csv") %>%
+#   mutate(FID = str_pad(FID, 4, pad = "0"))
+# 
+# # Just having the matching GEOID's
+# soil <- soil.load[soil.load$GEOID %in% soil_data$FID,]
+# print(soil)
+# soil@data <- merge(soil@data, soil_data, sort = FALSE, by.x = "GEOID", by.y = "FID")
+```
+
+# Blank map with basemap
+
+```{r}
+leaflet(data = soil.load) %>%
+  addProviderTiles(providers$Thunderforest.Landscape,options = providerTileOptions(noWrap = TRUE))%>%
+  addPolygons() %>%
+  addPolylines(color = "#63CBD3")
+  # addPolylines(color = "#63CBD3")
+```
+
+# Shape
+
+```{r}
+leaflet(data = soil.load) %>%
+  addProviderTiles("Stamen.Toner") %>%
+  
+  addPolylines(color = "#63CBD3")
+
+# rivers <- readOGR("./ne_10m_rivers_lake_centerlines")
+# 
+# leaflet(data = rivers) %>%
+#   addProviderTiles("Esri.WorldTerrain", options = providerTileOptions(noWrap = TRUE)) %>%
+#   addPolylines(color = "#63CBD3")
+```
+
+# Lines
+
+```{r}
+rivers <- readOGR("./ne_10m_rivers_lake_centerlines")
+
+leaflet(data = rivers) %>%
+  addProviderTiles("Esri.WorldTerrain", options = providerTileOptions(noWrap = TRUE)) %>%
+  addPolylines(color = "#63CBD3")

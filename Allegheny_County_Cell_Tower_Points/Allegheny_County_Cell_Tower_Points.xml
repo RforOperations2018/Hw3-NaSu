@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><gmd:MD_Metadata xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+<gmd:hierarchyLevel>
+<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
+<gmd:hierarchyLevelName>
+<gco:CharacterString>dataset</gco:CharacterString>
+</gmd:hierarchyLevelName>
+<gmd:contact gco:nilReason="missing"/>
+<gmd:dateStamp gco:nilReason="missing"/>
+<gmd:metadataStandardName>
+<gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+</gmd:metadataStandardName>
+<gmd:metadataStandardVersion>
+<gco:CharacterString>2007</gco:CharacterString>
+</gmd:metadataStandardVersion>
+<gmd:identificationInfo>
+<gmd:MD_DataIdentification>
+<gmd:citation gco:nilReason="missing"/>
+<gmd:abstract>
+<gco:CharacterString>This dataset portrays cell tower locations as points in Allegheny County.  The dataset is based on outbuilding codes in the Property Assessment Parcel Database used to identify cell towers for tax year 2016.Category:  OtherOrganization:  Allegheny CountyDepartment:  Geographic Information Systems Group; Office of Property Assessment; Department of Real EstateTemporal Coverage:  Tax Year 2016Data Notes:  Coordinate System:  Pennsylvania State Plane South Zone 3702; U.S. Survey FootDevelopment Notes:  none Other: noneRelated Document(s):  Data Dictionary (none)Frequency - Data Change:  As neededFrequency - Publishing:  As neededData Steward Name:  Eli ThomasData Steward Email: gishelp@alleghenycounty.us</gco:CharacterString>
+</gmd:abstract>
+<gmd:purpose>
+<gco:CharacterString>Allegheny County Cell Tower Points</gco:CharacterString>
+</gmd:purpose>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>ACGIS</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Allegheny County</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Cell Towers</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>telephone</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>communication</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>network</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>technology</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>facilities</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:resourceConstraints>
+<gmd:MD_Constraints>
+<gmd:useLimitation>
+<gco:CharacterString>Use Constraints:All parties acknowledge that the data is for  informational purposes only, there is no guarantee as to its  completeness or accuracy. Allegheny County Division of Computer Services Geographic Information Systems Group is not responsible for any  reliance upon said data. Distribution Liability:    The USER shall indemnify, save  harmless, and, if requested, defend those parties involved with the  development and distribution of this data, their officers, agents, and  employees from and against any suits, claims, or actions for injury,  death, or property damage arising out of the use of or any defect in the FILES or any accompanying documentation. Those parties involved with  the development and distribution excluded any and all implied  warranties, including warranties or merchantability and fitness for a  particular purpose and makes no warranty or representation, either  express or implied, with respect to the FILES or accompanying  documentation, including its quality, performance, merchantability, or  fitness for a particular purpose. The FILES and documentation are  provided &amp;quot;as is&amp;quot; and the USER assumes the entire risk as to its quality  and performance. Those parties involved with the development and  distribution of this data will not be liable for any direct, indirect,  special, incidental, or consequential damages arising out of the use or  inability to use the FILES or any accompanying documentation.</gco:CharacterString>
+</gmd:useLimitation>
+</gmd:MD_Constraints>
+</gmd:resourceConstraints>
+<gmd:language gco:nilReason="missing"/>
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+</gmd:MD_DataIdentification>
+</gmd:identificationInfo>
+</gmd:MD_Metadata>
