@@ -35,6 +35,7 @@ leaflet(data = river) %>%
 ```{r}
 Basin <- readOGR("./Allegheny_County_Basin_Outlines_Map/Allegheny_County_Basin_Outlines_Map.shp", layer = "Allegheny_County_Basin_Outlines_Map")
 
+# I would recommend calling your palettes something that has to do with the data instead of numbering, like palBasins or something. No points off though, cause it works
 pal22 <- colorFactor(c("#8c510a","#bf812d","#dfc27d","#f6e8c3","#c7eae5","#80cdc1","#35978f","#01665e"),c("Chartiers Creek","Lower Northern Allegheny River","Lower Ohio River","Saw Mill Run","Shallow-Cut Monongahela River","Thompson Run/Turtle Creek","Upper Allegheny River", "Upper Ohio/Allegheny/Monongahela Ri"))
 
 leaflet(data = Basin) %>%
@@ -47,17 +48,19 @@ leaflet(data = Basin) %>%
 
 ```{r}
 Food_site <- read.csv("Allegheny_County_Summer_Food_Sites.csv")
-
+# Just fyi, you can pipe mapvalues with dplyr
 Food_site$BREAKFAST_ <- mapvalues(Food_site$BREAKFAST_,c("7:30 - 8:30 am", "8 - 9 am","8  - 9 am","8:30 - 9:30 am","8:45 - 9:45 am","9 - 10 am","9 -10 am","9 - 9:30 am", "9:30 - 10:30 am"," "),c("7:30-8:30am", "8:00-9:00am","8:00-9:00am","8:30-9:30am","8:45-9:45am","9:00-10:00am","9:00-10:00am","9:00-9:30am", "9:30-10:30am","Unavailable"))
 
 levels(Food_site$BREAKFAST_ ) <- c("7:30-8:30am", "8:00-9:00am","8:30-9:30am","8:45-9:45am","9:00-10:00am","9:00-9:30am", "9:30-10:30am","Unavailable")
 
+# You can also simply call the colorBrewer palette you like ie "Set1" instead of putting each color in
 pal00 <- colorFactor(c('#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf'),c('7:30-8:30am','8:00-9:00am','8:00-9:00am','8:30-9:30am','8:45-9:45am','9:00-10:00am','9:00-10:00am','9:00-9:30am', '9:30-10:30am',"Unavailable"))
 
 leaflet() %>%
   addProviderTiles("OpenStreetMap") %>%
-  addCircleMarkers(data = Food_site, lng = ~ï..X, lat = ~Y, radius = 1.5, color = ~pal00(BREAKFAST_)) %>%
+  # I think something funky happened with the characters, you're fine
+  addCircleMarkers(data = Food_site, lng = ~X, lat = ~Y, radius = 1.5, color = ~pal00(BREAKFAST_)) %>%
   addLegend(position = "topright" , pal = pal00, values = Food_site$BREAKFAST_, title = "BREAKFAST_SCHEDULE")
-
+# None of your maps have a control in them!
 ```
 
